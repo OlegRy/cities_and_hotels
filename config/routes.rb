@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
+  devise_for :admins
   get 'ajax/get_hotels'
   get 'ajax/get_rooms'
   get 'ajax/submit'
   post 'ajax/book'
+
+  get 'admin/cities/index', as: 'user_root'
 
   get "/rooms/:room_id/booking" => "bookings#booking"
 	get '/rooms/book' => 'rooms#book'

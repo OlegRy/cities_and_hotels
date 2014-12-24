@@ -1,7 +1,7 @@
 class Admin::RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
   before_action :set_hotel, only: [:index, :create, :new, :show]
-  http_basic_authenticate_with name: "oleg", password: "ahsotiel1", except: [:index, :show]
+  before_filter :authenticate_admin!, :except => [:show, :index]
 
   def index
     @rooms = @hotel.rooms.all
