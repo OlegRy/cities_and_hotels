@@ -1,0 +1,11 @@
+== Cities and Hotels
+
+This is demo application for ITIS students.
+
+We use:
+
+* Ruby 2.1.4
+
+* Rails 4.1.7
+
+* Postgresql database

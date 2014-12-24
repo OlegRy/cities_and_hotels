@@ -1,0 +1,46 @@
+.form {
+	top: 50%; /* Отступ в процентах от верхнего края окна */
+	left: 50%; /* Отступ в процентах от левого края окна */
+	width: 450px; /* Ширина блока */
+	height: 450px; /* Высота блока */
+	position: absolute; /* Абсолютное позиционирование блока */
+	margin-top: -225px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
+	margin-left: -225px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
+	display: block;
+	text-align: center;
+}
+
+select {
+	font-family: sans-serif;
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	border-width: 2px;
+	border-color: #bbb;
+	background-color: #fff;
+}
+
+.text {
+	font-family: sans-serif;
+	border-radius: 3px;
+	width: 142px;
+	border-width: 2px;
+	border-color: #bbb;
+	background-color: white;
+	color: black;
+	border: 2px solid #bbb;
+}
+
+.submit {
+	color: #0099FF;
+	width: 100px;
+	height: 30px;
+	font-family: sans-serif;
+	background-color: #E0E0E0 ;
+	border-radius: 5px;
+	border: 2px solid #bbb;
+}
+
+#date_start_1i, #date_start_2i, #date_start_3i, #date_end_1i, #date_end_2i, #date_end_3i {
+	width: 100px;
+}

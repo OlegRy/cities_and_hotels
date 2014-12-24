@@ -1,0 +1,28 @@
+<h1>Listing bookings</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Date start</th>
+      <th>Date end</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.user_name %></td>
+        <td><%= booking.date_start %></td>
+        <td><%= booking.date_end %></td>
+        <td><%= link_to 'Edit', edit_admin_booking_path(booking) %></td>
+        <td><%= link_to 'Destroy', admin_booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Booking', new_admin_room_booking_path(@room) %>

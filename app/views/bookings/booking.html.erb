@@ -1,0 +1,17 @@
+Booking page
+<form action="/rooms/<%= @room.id %>/booking">
+  <input type='text' id='date_start' name='date_start'>
+  <input type='text' id='date_end' name='date_end'>
+
+  <button type='submit'>Check room</button>
+</form>
+
+<% if @booked_days && @booked_days.empty? %>
+  Congratulations! You booking is here:
+  <%= link_to 'view', admin_room_bookings_path(@room) %>
+<% elsif @booked_days %>
+
+  Already booked:
+  <%= @booked_days %>
+
+<% end %>

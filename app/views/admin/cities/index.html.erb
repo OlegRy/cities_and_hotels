@@ -1,0 +1,28 @@
+<h1>Listing cities</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hotels count</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cities.each do |city| %>
+      <tr>
+        <td><%= city.name %></td>
+        <td><%= city.hotels.count %></td>
+        <td><%= link_to 'List hotels', admin_city_hotels_path(city) %></td>
+        <td><%= link_to 'Details', admin_city_path(city) %></td>
+        <td><%= link_to 'Edit city', edit_admin_city_path(city) %></td>
+        <td><%= link_to 'Destroy city', admin_city_path(city), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New City', new_admin_city_path %>

@@ -1,0 +1,9 @@
+Booking page
+<form action="/rooms/<%= @room.id %>/booking">
+  <input type='text' id='date_start' name='date_start'>
+  <input type='text' id='date_end' name='date_end'>
+
+  <button type='submit'>Check room</button>
+</form>
+
+Result: <%= @result %>
